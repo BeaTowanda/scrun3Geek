@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iniciá Sesión - Geek Store</title>
+        <link href="https://icons8.com/icon/AQzblGSQQHDZ/venta" rel="stylesheet">
+       
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+
+        <link rel="stylesheet" href="/stylesheets/modificaProductos.css" />
+        <link rel="stylesheet" href="/stylesheets/modalSimple.css" />
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+    <!--
+    <header>
+        <div class="up-bar">
+            <div class="logo">
+            <img src="/img/logo.png" alt="Logo de Geek Store" >
+            </div>
+        <div class="mid-bar">
+            <h2 class="envios">
+                <i class="fas fa-truck"></i>
+                ENVÍOS PREMIUM Y STANDARD
+            </h2>
+   
+            <h2 class="mejoresPrecios">
+                <i class="fas fa-dollar-sign"></i>
+                LOS MEJORES PRECIOS
+            </h2>
+   
+            <h2 class="asesoramiento">
+                <i class="fas fa-user-check"></i>
+                ASESORAMIENTO PERSONALIZADO
+            </h2>
+        </div>
+            <div class="login">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="burger-menu">
+                <i class="fa fa-bars burger"></i>
+            </div>
+   
+            <ul>
+                <li><a href="/productCart">PRODUCTOS</a> </li>
+                <li><a href="/ofertas.html">OFERTAS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+            </ul>
+            <div class="carrito">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </nav>
+    </header> -->
+    <%- include('partials/header') %>
+    <main>
+        <div class="altaProductLogo">
+           
+            <h3>MODIFICAR PRODUCTO</h3>
+            <form action="/" method="GET">
+            <label>CODIGO:</label>
+            <input placeholder="" type="text" id="codigo" required>          
+            <ul>      
+            <li id="altaLogo"><i class="fas fa-file-alt"></i></li>
+            <li><a href="#modal2">Importante<i class="fas fa-user-edit"></i></a></li>
+            <input type="submit" name="submit" id="enviar" value="ENVIAR"> </input>
+            </ul>
+           </form>            
+        </div> 
+        <%- include('partials/modProd') %>          
+  <!-- <div class="all">
+        <form action="/" method="GET">
+            <div class="descriptionProduct">
+                <p><label id="" for ="nombreProducto">NOMBRE DEL PRODUCTO</label>
+                <input placeholder="" type="text" minlength="10" maxlength="45" name="nombreProducto" id="user1" required "[[A-Za-z ]{1,6}"></p>
+                <br/>
+                <p><label id="" for ="descripcionProducto">DESCRIPCION PRODUCTO </label>
+                    <input placeholder="" type="text" minlength="10" maxlength="150" name="descripcionProducto" id="user1" required "[[A-Za-z ]{1,6}"></p>  
+                <br/>            
+                <label id="" for="file">Imagen Del Producto</label>
+                <input type="file" name="archivo" id="archivo" accept=".png, .jpeg, .jpg, .gif" sytle="display:none">        
+            </div>
+            <div>                  
+                <div class="licencias">
+                    <h3>Indicá Licencia-Producto</h3>
+                   
+                    <label></label>        
+                        <input type="checkbox" name="licencias" value="licencias">Game Of Thrones
+                        <input type="checkbox" name="licencias" value="licencias">The Big Bang Theory
+                        <input type="checkbox" name="licencias" value="licencias">Spiderman                    
+                        <input type="checkbox" name="licencias" value="licencias">Superman  
+                        <p>Nueva Licencia<a href="/altaLicencias"><i class="fas fa-arrow-alt-circle-right"></i></a>
+                        </p>                              
+                </div>
+                <div class="tipoProducto">
+                    <h3>Indicá Tipo de Producto</h3>                    
+                    <label></label>        
+                        <input type="checkbox" name="tipoProducto" value="tipoProducto">Remera
+                        <input type="checkbox" name="tipoProducto" value="tipoProducto">Gorro
+                        <input type="checkbox" name="tipoProducto" value="tipoProducto">Mate  
+                        <p>"TIPO"nuevo<a href="/altaLicencias"><i class="fas fa-arrow-alt-circle-right"></i></a>
+                        </p>              
+                 </div>          
+                <div class="seleccionColor">
+                    <h3>Color del Producto</h3>
+                    <br/>
+                    <div class="colores">  
+                    <input type="checkbox" id = "amarillo" name="amarillo" value="amarillo" >
+                    <label for=""><img id="colorList" src="/img/etiquetaAmarilla.png"></label>          
+                    <input type="checkbox" id="azul" name="azul" value="azul">
+                    <label for=""><img id="colorList" src="/img/etiquetaAzul.png"></label>          
+                    <input type="checkbox" id="aqua" name="aqua" value="aqua">
+                    <label for=""><img id="colorList" src="/img/etiquetaAqua.png"></label>          
+                    <input type="checkbox" id ="violeta" name="superman" value="superman">
+                    <label for=""><img id="colorList" src="/img/etiquetaVioleta.png"></label>
+                    <input type="checkbox" id ="negra" name="superman" value="superman">
+                    <label for=""><img id="colorList" src="/img/etiquetaNegra.png"></label>
+                    <input type="checkbox" id ="gris" name="superman" value="superman">
+                    <label for=""><img id="colorList" src="/img/etiquetaGris.png"></label>
+                    </div>
+                    <p>Nuevo COLOR<a href="/altaLicencias"><i class="fas fa-arrow-alt-circle-right"></i></a>
+                    </p>
+                </div>
+                <div class="seleccionTalle">
+                    <h3>Talle Producto</h3>
+                    <div id="talle">
+                    <select name ="talles" id ="talles">
+                        <option value = "extraSmall">ExtraSmall </option>
+                        <option value = "small">Small</option>
+                        <option value = "medium">Medium</option>
+                        <option value = "large">Large</option>
+                        <option value = "extraLarge">Extra Large</option>
+                    </select>
+                    </div>
+                <div class="productValores">            
+                <div class="otrosValores">
+                    <p><label id="" for ="precioProducto">PRECIO</label>
+                    <input placeholder="" type="number" min="1" pattern="^[0-9]+" name="precioProducto" id="user" required></p>
+                    <p><label id="" for ="cantidadProducto">CANTIDAD</label>
+                    <input placeholder="" type="number" min="1" pattern="^[0-9]+" name="cantidadProducto" id="user" required></p>
+                </div>
+                <div class="ofertaPorcentaje">
+                    <h2><a href="#modal4"><img src="https://img.icons8.com/ios/50/000000/sale--v2.png"></a></h2>
+                   
+                    <p><label id="" for ="ofertaPorcentaje">DESCUENTO</label>
+                        <input placeholder="" type="number" min="1" max="90" step="5" pattern="^[0-90]+" name="ofertaPorcentaje" id="user" required></p>
+                </div>
+                </div>
+   
+            </div> 
+           
+            <div id="modal2" class="modalmask">            
+                <div class="modalbox rotate">
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2>RECUERDA</h2>
+                    <p>Si alguna de las características del producto son NUEVAS(ej:un nuevo color, tipo,etc)
+                        deberás proceder a dar el alta:</p>
+                    <p> Está indicado en cada Item.- </p>
+                    <p>Busca el ICONO</p>
+                     
+                </div>
+            </div>
+            <div id="modal4" class="modalmask">            
+                <div class="modalbox rotate">
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2>Oferta/NO Ofertar</h2>
+                    <p>OFERTAR producto:  ingresar un número entero mayor que 1
+                        y menor a  90.-</p>
+                      <p>Si NO DESEA OFERTAR ingrese 1</p>
+                   
+                </div>
+            </div>
+            <div class="submitMasEnviar">          
+                <input type="submit" name="submit" id="enviar" value="ENVIAR"> </input>
+            </div>        
+            <div class= "closeMain" >
+            <a href="/" id="vuelvo">Volver a Pagina Principal</a>
+            </div>
+             
+    </form>   
+    </div> -->
+    </main>
+    </body>
+    <!--
+        <footer>
+            <div class="sinCopyright">
+        <div class="primeraParte">
+            <section class= informacionLegal>
+                <h1>INFORMACIÓN LEGAL</h1>
+                <ul>
+                    <li><a href=# >Aviso Legal</a></li>
+                    <li><a href=# >Politica de privacidad</a></li>
+                    <li><a href=# >Politica de cookies</a></li>
+                    <li><a href=# >Configuración de cookies</a></li>
+                    <li><a href=# >Términos y condiciones</a></li>
+                </ul>
+            </section>
+   
+            <section class= "asesoramiento">
+                <h1>ASESORAMIENTO</h1>
+                <ul>
+                    <li><a href=# >Quiénes somos</a></li>
+                    <li><a href=# >Ayuda</a></li>
+                    <li><a href=# >Contacto</a></li>
+                </ul>
+            </section>
+        </div>
+            <section class="redes">
+                <h5>Encontranos también en:</h5>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+            </section>
+        </div>
+            <section class="Copyright">
+   
+                <p>Copyright © 2020-2022 GeekStore S.R.L.</p>
+        </footer> -->
+        <%- include('partials/footer') %>    
+    </body>
+    </html>
+ 
+
+
+
+
