@@ -20,5 +20,6 @@ router.get('/login', mainController.login);
 router.get('/register', mainController.register);
 router.get('/altaPRoductos', mainController.altaProductos);
 router.get('/modificaProductos', mainController.modificaProductos);
+router.get('/detalleProducto', mainController.detalleProducto);
 
 module.exports = router;

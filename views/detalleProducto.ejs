@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciá Sesión - Geek Store</title>
+    <link href="https://icons8.com/icon/AQzblGSQQHDZ/venta" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="/stylesheets/styleDetalleProducto.css" />
+    <link rel="stylesheet" href="/stylesheets/modalSimple.css" />
+   
+</head>
+<body>
+    <%- include('partials/header') %>
+<!--<header>
+    <div class="up-bar">
+        <div class="logo">
+        <img src="/img/logo.png" alt="Logo de Geek Store" >
+        </div>
+    <div class="mid-bar">
+        <h2 class="envios">
+            <i class="fas fa-truck"></i>
+            ENVÍOS PREMIUM Y STANDARD
+        </h2>
+
+        <h2 class="mejoresPrecios">
+            <i class="fas fa-dollar-sign"></i>
+            LOS MEJORES PRECIOS
+        </h2>
+
+        <h2 class="asesoramiento">
+            <i class="fas fa-user-check"></i>
+            ASESORAMIENTO PERSONALIZADO
+        </h2>
+    </div>
+        <div class="login">
+            <i class="fas fa-user-circle"></i>
+        </div>
+    </div> 
+    <nav class="navbar">
+        <div class="burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+
+        <ul>
+            <li><a href="/productCart">PRODUCTOS</a> </li>
+            <li><a href="/ofertas.html">OFERTAS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+        </ul>
+        <div class="carrito">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </nav>
+</header>-->
+<main>
+    <div class="altaProductLogo"> 
+        <h3>REMERA     S U P E R M A N </h3>
+        <ul>       
+        <li><img id="licenciaLogo" src="img/superman.jpg"></li>
+        <li><a href="#modal2">Importante<i class="fas fa-user-edit"></i></a></li>
+        </ul>             
+    </div>  
+    <nav>      
+   
+        <div class="descriptionProduct">
+            <div class="divDescriptionText">
+            <ul>
+            <li>Remera Manga corta / </li>            
+            <li>Algodón Peruano 150 hilos/</li>
+            <li>Cuello REDONDO</li>         
+            <li>STOCK DISPONIBLE</li>          
+            <li>Varios COLORES </li> 
+            </ul>
+            </div>
+            <div class="divGrandePrincipal">       
+            <div class="divPrincipal">  
+                <img id="principal" src="/img/remera.productos.frente.png">             
+                <img id="espalda" src="/img/remera.productos.dorso.png">  
+                          
+            </div>
+            <div class="divPrincipalPrecio">
+                <p>PRECIO UNITARIO = $ 6500</p>
+                <p>PRECIO DOCENA= $ 45000</p>
+            </div>
+            <div class="divSecundarias">              
+                <img id="secundarias" src="/img/remera.frente.corte1.png">
+                <img id="secundarias" src="/img/remera.frente.corte2.png">
+                <img id="secundariasManga" src="/img/remera.frente.corte3.png">
+            </div> 
+        </div>                      
+        </div>
+    </nav>  
+<div class="cajaGrande">
+        <div class="productsRelacionados">
+            <h2>PRODUCTOS</h2>
+            <h2>Relacionados</h2>
+            <article>
+            <img id="productsRelImagen" src="img/remeraBigBangSinFondo.png">            
+            <span id="flecha">Ver<a href="/detalleProducto"><i class="fas fa-arrow-alt-circle-right"></i></a></span>
+            </article>
+            <article>
+            <img id="productsRelImagen" src="/img/mateSupermanSinFondo.png"> 
+            <span id="flecha">Ver<a href="/detalleProducto"><i class="fas fa-arrow-alt-circle-right"></i></a></span>
+            </article>
+            <article>
+            <img id="productsRelImagen" src="/img/gorraSupermanTransparente.png">
+            <span id="flecha">Ver<a href="/detalleProducto"><i class="fas fa-arrow-alt-circle-right"></i></a></span>
+            </article>
+        </div>    
+        <div class="productValores"> 
+        <form action="/" method="GET">           
+            <div class="otrosValores">
+                
+                <p><label id="" for ="cantidadProducto">CANTIDAD</label>
+                <input placeholder="" type="number" min="1" pattern="^[0-9]+" name="cantidadProducto" id="user" required></p> 
+                <p><label id="precio total" for ="precioProducto">PRECIO</label>
+                <input placeholder="" type="number" min="1" pattern="^[0-9]+" name="precioProducto" id="user" required></p>
+            </div>
+            <div class="ofertaPorcentaje">
+                <h2><a href="#modal4"><img src="https://img.icons8.com/ios/50/000000/sale--v2.png"></a></h2>
+                
+                <p><label id="" for ="ofertaPorcentaje">DESCUENTO</label>
+                    <input placeholder="" type="number" min="1" max="90" step="5" pattern="^[0-90]+" name="ofertaPorcentaje" id="user" required></p> 
+            </div>
+            <div class="seleccionTalle">
+                <p>Talle</p>
+                <div id="talle">
+                <select name ="talles" id ="talles">
+                    <option value = "extraSmall">ExtraSmall </option>
+                    <option value = "small">Small</option>
+                    <option value = "medium">Medium</option>
+                    <option value = "large">Large</option>
+                    <option value = "extraLarge">Extra Large</option>
+                </select>
+                </div>
+            </div>         
+        <div>                  
+                      
+            <div class="seleccionColor">                
+              
+                <p>Colores DISPONIBLES</p>  
+               
+                <div class="colores"> 
+                <input type="checkbox" id = "amarillo" name="amarillo" value="amarillo" >
+                <label for=""><img id="colorList" src="/img/etiquetaAmarilla.png"></label>           
+                <input type="checkbox" id="azul" name="azul" value="azul">
+                <label for=""><img id="colorList" src="/img/etiquetaAzul.png"></label>           
+                
+                <input type="checkbox" id ="violeta" name="superman" value="superman">
+                <label for=""><img id="colorList" src="/img/etiquetaVioleta.png"></label>
+                <input type="checkbox" id ="negra" name="superman" value="superman">
+                <label for=""><img id="colorList" src="/img/etiquetaNegra.png"></label>
+                <input type="checkbox" id ="gris" name="superman" value="superman">
+                <label for=""><img id="colorList" src="/img/etiquetaGris.png"></label>
+                </div>                
+            </div>
+            <div class="seleccionTalle">
+                <p>Talle Producto</p>
+                <div id="talle">
+                <select name ="talles" id ="talles">
+                    <option value = "extraSmall">ExtraSmall </option>
+                    <option value = "small">Small</option>
+                    <option value = "medium">Medium</option>
+                    <option value = "large">Large</option>
+                    <option value = "extraLarge">Extra Large</option>
+                </select>
+                </div>            
+        </div>
+    </div><!--cierro cajaGrande-->       
+        <div id="modal2" class="modalmask">            
+            <div class="modalbox rotate">
+                <a href="#close" title="Close" class="close">X</a>
+                <h2>ENVIO-COSTOS</h2>
+                <p>Podés OPTAR por envío Standard o PREMIUM
+                    al momento de la COMPRA podés CONSULAR</p>
+                <p>El COSTO de envío Standard es sensiblemente MENOR </p>
+               
+                  
+            </div>
+        </div>
+        <div id="modal4" class="modalmask">            
+            <div class="modalbox rotate">
+                <a href="#close" title="Close" class="close">X</a>
+                <h2>OFERTA VIGENTE EN ESTE PRODUCTO</h2>
+                <p>Si existe oferta sobre este producto.-</p>
+                  <p>verá el monto con descuento apliado</p> 
+                
+            </div>
+        </div>        
+        <div class="submitMasEnviar">  
+            <a href="#modal2">Importante<i class="fas fa-user-edit"></i></a>        
+            <input type="submit" name="submit" id="enviar" value="ENVIAR"> </input>
+        </div>        
+        <div class= "closeMain" >
+        <a href="/" id="vuelvo">Volver a Pagina Principal</a>
+        </div>
+    </form> 
+</main>
+</body>
+<%- include('partials/footer') %>
+<!--<footer>
+        <div class="sinCopyright">
+    <div class="primeraParte">
+        <section class= informacionLegal>
+            <h1>INFORMACIÓN LEGAL</h1>
+            <ul>
+                <li><a href=# >Aviso Legal</a></li>
+                <li><a href=# >Politica de privacidad</a></li>
+                <li><a href=# >Politica de cookies</a></li>
+                <li><a href=# >Configuración de cookies</a></li>
+                <li><a href=# >Términos y condiciones</a></li>
+            </ul>
+        </section>
+
+        <section class= "asesoramiento">
+            <h1>ASESORAMIENTO</h1>
+            <ul>
+                <li><a href=# >Quiénes somos</a></li>
+                <li><a href=# >Ayuda</a></li>
+                <li><a href=# >Contacto</a></li>
+            </ul>
+        </section>
+    </div>
+        <section class="redes">
+            <h5>Encontranos también en:</h5>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook"></i>
+        </section>
+    </div>
+        <section class="Copyright">
+
+            <p>Copyright © 2020-2022 GeekStore S.R.L.</p>
+    </footer>-->
+    </body>
+    </html>

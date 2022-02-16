@@ -42,6 +42,9 @@ module.exports=productos;
     modificaProductos: (req, res) => {
       res.render("modificaProductos");
   },
+    detalleProducto:(req,res) =>{
+      res.render("detalleProducto")
+    }
   };
   
   module.exports=mainController;
