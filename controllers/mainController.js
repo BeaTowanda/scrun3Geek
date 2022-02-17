@@ -44,7 +44,13 @@ module.exports=productos;
   },
     detalleProducto:(req,res) =>{
       res.render("detalleProducto")
-    }
+    },
+    productCart:(req,res) =>{
+      res.render("productCart")
+    },
+    productCart2:(req,res) =>{
+      res.render("productCart2")
+    },
   };
   
   module.exports=mainController;

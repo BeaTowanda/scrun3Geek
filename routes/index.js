@@ -21,5 +21,6 @@ router.get('/register', mainController.register);
 router.get('/altaPRoductos', mainController.altaProductos);
 router.get('/modificaProductos', mainController.modificaProductos);
 router.get('/detalleProducto', mainController.detalleProducto);
-
+router.get('/productCart', mainController.productCart);
+router.get('/productCart2', mainController.productCart2);
 module.exports = router;
